@@ -33,42 +33,25 @@ function App() {
 
 function ResponsiveRoutes() {
 	const theme = useTheme();
-	const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
 
-	if (isMdUp) {
-
-		return (
-			<Routes>
-				<Route
-					path="/la-sfera"
-					element={
-						<>
-							<CustomBar />
-							<Box id="home"><Home /></Box>
-							<Box id="who-we-are"><WhoWeAre /></Box>
-							<Box id="events"><Events /></Box>
-							<Box id="contact"><Contact /></Box>
-						</>
-					}
-				/>
-				<Route path="/events/:route" element={<EventDetail />} />
-				<Route path="*" element={<Navigate to="/la-sfera" replace />} />
-			</Routes>
-		);
-	}
 
 	return (
-		<>
-			<CustomBar />
-			<Routes>
-				<Route path="/la-sfera" element={<Home />} />
-				<Route path="/home" element={<Home />} />
-				<Route path="/who-we-are" element={<WhoWeAre />} />
-				<Route path="/events" element={<Events />} />
-				<Route path="/contact" element={<Contact />} />
-				<Route path="/events/:route" element={<EventDetail />} />
-			</Routes>
-		</>
+		<Routes>
+			<Route
+				path="/la-sfera"
+				element={
+					<>
+						<CustomBar />
+						<Box id="home"><Home /></Box>
+						<Box id="who-we-are"><WhoWeAre /></Box>
+						<Box id="events"><Events /></Box>
+						<Box id="contact"><Contact /></Box>
+					</>
+				}
+			/>
+			<Route path="/events/:route" element={<EventDetail />} />
+			<Route path="*" element={<Navigate to="/la-sfera" replace />} />
+		</Routes>
 	);
 }
 

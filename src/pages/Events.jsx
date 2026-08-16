@@ -4,19 +4,21 @@ import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import { Grid, Box, useMediaQuery, useTheme } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import eventImg from "../assets/img/eventspage.jpg";
 import { useLanguage } from "../context/LanguageContext.jsx";
-import { useNavigate } from "react-router-dom";
-import { Grid, Box } from '@mui/material';
 
 function Events() {
 	const { data } = useLanguage();
 	const navigate = useNavigate();
+	const theme = useTheme();
 
 	const handleClickOpen = (route) => {
 		navigate(`/events/${route}`);
 	};
 
+	const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
 
 	return (
 
@@ -68,21 +70,28 @@ function Events() {
 								display: "flex",
 								flexDirection: "column",
 								width: { xs: "100%", sm: "90%", md: "100%" },
+								height: { xs: "auto", sm: 400, md: 450 },
 							}}>
 							<CardHeader
 								title={event.title}
 							/>
 							<CardMedia component="img" image={event?.image} />
-							<CardContent>
-								<Typography variant="body1" >
-									{event.subtitle}
-								</Typography>
-							</CardContent>
-							<CardContent sx={{ mt: "auto", textAlign: "center" }}>
-								<Typography variant="body1" sx={{ fontWeight: 600 }}>
-									{event.next}{event.info[0].date}
-								</Typography>
-							</CardContent>
+							{isMdUp && (
+								<>
+
+									<CardContent>
+										<Typography variant="body1" >
+											{event.subtitle}
+										</Typography>
+									</CardContent>
+									<CardContent sx={{ mt: "auto", textAlign: "center" }}>
+										<Typography variant="body1" sx={{ fontWeight: 600 }}>
+											{event.next}{event.info[0].date}
+										</Typography>
+									</CardContent>
+								</>
+							)}
+
 						</Card>
 					</Grid>
 				))}
