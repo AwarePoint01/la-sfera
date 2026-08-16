@@ -7,6 +7,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import healingEnergyImg from "../assets/img/healingEnergy.jpg";
 import meditationImg from "../assets/img/meditation.jpg";
 import readingImg from "../assets/img/reading.jpg";
+import "flag-icons/css/flag-icons.min.css";
 
 export default {
 	settings: {
@@ -29,6 +30,13 @@ export default {
 			],
 			language: {
 				label: "Select Language",
+				icon: <span className="fi fi-gb" style={{
+					width: "100%",
+					height: "100%",
+					display: "block",
+					backgroundSize: "cover",
+					backgroundPosition: "center",
+				}} />,
 			},
 		},
 		home: {
@@ -86,7 +94,7 @@ export default {
 					next: "Next event: ",
 				},
 				{
-					title: "Reading",
+					title: "Conference",
 					subtitle: "Rebalance your inner energy thanks to an extraordinary technique.",
 					description: "Healing energy is a unique and natural approach to restoring balance and harmony, both within ourselves and in our relationships with others. This method is based on a fundamental principle: health is the natural expression of a deep balance between body, mind, and spirit. \n\nAchieving this state means learning to love ourselves authentically and to respect our natural energy flow. Only in this way is it possible to promote healing and rediscover a deep connection with ourselves.",
 					route: "reading",
@@ -119,6 +127,13 @@ export default {
 			],
 			language: {
 				label: "Seleziona lingua",
+				icon: <span class="fi fi-it" style={{
+					width: "100%",
+					height: "100%",
+					display: "block",
+					backgroundSize: "cover",
+					backgroundPosition: "center",
+				}} />,
 			},
 		},
 		home: {
@@ -169,7 +184,7 @@ export default {
 					next: null,
 				},
 				{
-					title: "Letture e seminari",
+					title: "Conferenze e seminari",
 					subtitle: "Leggiamo e discutiamo insieme le parole dei grandi maestri dello sviluppo consapevole.",
 					description: "Lettura di gruppo per esplorare nuovi libri e condividere idee.",
 					route: "reading",
@@ -213,6 +228,13 @@ export default {
 			],
 			language: {
 				label: "Sprache auswählen",
+				icon: <span class="fi fi-de" style={{
+					width: "100%",
+					height: "100%",
+					display: "block",
+					backgroundSize: "cover",
+					backgroundPosition: "center",
+				}} />,
 			},
 
 		},
@@ -265,7 +287,7 @@ export default {
 					next: null,
 				},
 				{
-					title: "Vorlesung",
+					title: "Konferenz",
 					subtitle: "Vorlesungsgruppe, um neue Bücher zu erkunden und Ideen auszutauschen.",
 					description: "Vorlesungsgruppe, um neue Bücher zu erkunden und Ideen auszutauschen.",
 					route: "reading",
