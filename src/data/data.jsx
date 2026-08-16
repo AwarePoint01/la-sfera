@@ -8,6 +8,7 @@ import healingEnergyImg from "../assets/img/healingEnergy.jpg";
 import meditationImg from "../assets/img/meditation.jpg";
 import readingImg from "../assets/img/reading.jpg";
 import "flag-icons/css/flag-icons.min.css";
+import { eventsInfo } from "./events";
 
 export default {
 	settings: {
@@ -44,69 +45,37 @@ export default {
 		},
 		whoWeAre: {
 			title: "Who we are",
-			description: "Our association shares ideas about growth and inner well-being, placing self-awareness at the center of every meeting. We offer events to help you discover your inner world, give the right value to life and people, address the big questions inherent in humanity, and recognize beauty and harmony.",
+			description: "We share ideas about growth and inner well-being, placing self-awareness at the center of every meeting. We offer events to help you discover your inner world, give the right value to life and people, address the big questions inherent in humanity, and recognize beauty and harmony.",
 		},
 		events: {
 			title: "Events",
 			subtitle: "Next events",
 			description: "Check out our upcoming events.",
+			button: "Join",
 			details: [
 				{
 					title: "Healing energy",
 					subtitle: "Rebalance your inner energy thanks to an extraordinary technique.",
 					description: "Healing energy is a unique and natural approach to restoring balance and harmony, both within ourselves and in our relationships with others. This method is based on a fundamental principle: health is the natural expression of a deep balance between body, mind, and spirit. \n\nAchieving this state means learning to love ourselves authentically and to respect our natural energy flow. Only in this way is it possible to promote healing and rediscover a deep connection with ourselves.",
 					route: "healing-energy",
-					info: [
-						{
-							date: "05 Sep. 2025",
-							location: "Stuttgart, Germany",
-							urlmap: "https://www.google.com/maps/place/Stuttgart,+Germany/@48.7758459,9.1829321,12z/data=!3m1!4b1!4m5!3m4!1s0x4799fbbfbbd8e7c7:0x422d6cdbf2a0e0b8!8m2!3d48.7758459!4d9.1829321",
-						},
-						{
-							date: "06 Sep. 2025",
-							location: "Milan, Italy",
-							urlmap: "https://www.google.com/maps/place/Milan,+Metropolitan+City+of+Milan,+Italy/@45.4642035,9.189982,12z/data=!3m1!4b1!4m5!3m4!1s0x4786c6e0d308f8e7:0x2a9cfcf8b1a0e0b8!8m2!3d45.4642035!4d9.189982",
-						},
-					],
+					info: eventsInfo["healing-energy"],
 					image: healingEnergyImg,
-					next: "Next event: ",
-				},
-				{
-					title: "Meditation",
-					subtitle: "Stop now. Think for a moment that breathing is what allows you to live.",
-					description: "Healing energy is a unique and natural approach to restoring balance and harmony, both within ourselves and in our relationships with others. This method is based on a fundamental principle: health is the natural expression of a deep balance between body, mind, and spirit. \n\nAchieving this state means learning to love ourselves authentically and to respect our natural energy flow. Only in this way is it possible to promote healing and rediscover a deep connection with ourselves.",
-					route: "meditation",
-					info: [
-						{
-							date: "05 Sep. 2025",
-							location: "Stuttgart, Germany",
-							urlmap: "https://www.google.com/maps/place/Stuttgart,+Germany/@48.7758459,9.1829321,12z/data=!3m1!4b1!4m5!3m4!1s0x4799fbbfbbd8e7c7:0x422d6cdbf2a0e0b8!8m2!3d48.7758459!4d9.1829321",
-
-						},
-						{
-							date: "06 Sep. 2025",
-							location: "Milan, Italy",
-							urlmap: "https://www.google.com/maps/place/Milan,+Metropolitan+City+of+Milan,+Italy/@45.4642035,9.189982,12z/data=!3m1!4b1!4m5!3m4!1s0x4786c6e0d308f8e7:0x2a9cfcf8b1a0e0b8!8m2!3d45.4642035!4d9.189982",
-
-						},
-					],
-					image: meditationImg,
-					next: "Next event: ",
 				},
 				{
 					title: "Conference",
 					subtitle: "Discover the ideas of the international school of self awareness.",
 					description: "TODO: Describe the conference and its objectives.",
 					route: "reading",
-					info: [
-						{
-							date: "No events currently scheduled",
-							location: null,
-							urlmap: null,
-						},
-					],
+					info: eventsInfo["reading"],
 					image: readingImg,
-					next: null,
+				},
+				{
+					title: "Meditation",
+					subtitle: "Stop now. Think for a moment that breathing is what allows you to live.",
+					description: "TODO: Describe the meditation and its benefits.",
+					route: "meditation",
+					info: eventsInfo["meditation"],
+					image: meditationImg,
 				},
 			]
 		},
@@ -148,63 +117,39 @@ export default {
 		},
 		whoWeAre: {
 			title: "Chi siamo",
-			description: "La nostra associazione condivide idee riguardanti la crescita e il benessere interiore, mettendo al centro di ogni incontro la consapevolezza di sé. \n\nProponiamo eventi per scoprire il proprio mondo interiore, dare il giusto valore alla vita e alle persone, occuparsi delle grandi domande insite nell’uomo, riconoscere bellezza e armonia.",
+			description: "Condividiamo idee riguardanti la crescita e il benessere interiore, mettendo al centro di ogni incontro la consapevolezza di sé. \n\nProponiamo eventi per scoprire il proprio mondo interiore, dare il giusto valore alla vita e alle persone, occuparsi delle grandi domande insite nell’uomo, riconoscere bellezza e armonia.",
 		},
 		events: {
 			title: "Eventi",
 			subtitle: "Prossimi eventi",
 			description: "Scopri i nostri eventi in programma.",
+			button: "Partecipa",
 			details: [
 				{
 					title: "Energia risanante",
 					subtitle: "Riequilibria la tua energia interiore grazie ad una tecnica straordinaria.",
 					description: "Energia risanante è un approccio unico e naturale per ristabilire equilibrio e armonia, sia dentro di noi che nelle relazioni con gli altri. Questo metodo si fonda su un principio fondamentale: la salute è l’espressione naturale di un equilibrio profondo tra corpo, mente e spirito. \n\nRaggiungere questo stato significa imparare ad amarci autenticamente e a rispettare il nostro naturale flusso energetico. Solo così è possibile promuovere la guarigione e ritrovare una connessione profonda con noi stessi.",
 					route: "healing-energy",
-					info: [
-						{
-							date: "05 Sep. 2025",
-							location: "Stuttgart, Germany",
-							urlmap: "https://www.google.com/maps/place/Stuttgart,+Germany/@48.7758459,9.1829321,12z/data=!3m1!4b1!4m5!3m4!1s0x4799fbbfbbd8e7c7:0x422d6cdbf2a0e0b8!8m2!3d48.7758459!4d9.1829321",
-						},
-						{
-							date: "06 Sep. 2025",
-							location: "Milan, Italy",
-							urlmap: "https://www.google.com/maps/place/Milan,+Metropolitan+City+of+Milan,+Italy/@45.4642035,9.189982,12z/data=!3m1!4b1!4m5!3m4!1s0x4786c6e0d308f8e7:0x2a9cfcf8b1a0e0b8!8m2!3d45.4642035!4d9.189982",
-						},
-					],
+					info: eventsInfo["healing-energy"],
 					image: healingEnergyImg,
-					next: "Prossimo incontro: ",
-				},
-				{
-					title: "Meditazione",
-					subtitle: "Fermati ora. Pensa per un momento che il respiro è proprio ciò che ti consente di vivere.",
-					description: "Ti sei mai sentito teso, rapito dalle emozioni, trascinato a destra e a sinistra dai pensieri, assente?\n Hai mai provato a chiudere semplicemente gli occhi e fare un passo dentro di te?\n\n È proprio questo passo in dentro che ti permette di prendere distanza dalle sollecitazioni della vita, sperimentando un luogo di silenzio, dove tu hai tempo di scegliere ciò che vuoi veramente.\n\n La meditazione è un allenamento che ti permette di scoprire questo luogo, di praticarlo e di portarlo con te nella vita quotidiana.",
-					route: "meditation",
-					info: [
-						{
-							date: "Non ci sono eventi in programma al momento",
-							location: null,
-							urlmap: null,
-						},
-					],
-					image: meditationImg,
-					next: null,
 				},
 				{
 					title: "Conferenze e seminari",
 					subtitle: "Scopri le idee dell'international school of self awareness.",
 					description: "Scopri le idee dell'international school of self awareness.",
 					route: "reading",
-					info: [
-						{
-							date: "Non ci sono eventi in programma al momento",
-							location: null,
-							urlmap: null,
-						},
-					],
+					info: eventsInfo["reading"],
 					image: readingImg,
-					next: null,
 				},
+				{
+					title: "Meditazione",
+					subtitle: "Fermati ora. Pensa per un momento che il respiro è proprio ciò che ti consente di vivere.",
+					description: "Ti sei mai sentito teso, rapito dalle emozioni, trascinato a destra e a sinistra dai pensieri, assente?\n Hai mai provato a chiudere semplicemente gli occhi e fare un passo dentro di te?\n\n È proprio questo passo in dentro che ti permette di prendere distanza dalle sollecitazioni della vita, sperimentando un luogo di silenzio, dove tu hai tempo di scegliere ciò che vuoi veramente.\n\n La meditazione è un allenamento che ti permette di scoprire questo luogo, di praticarlo e di portarlo con te nella vita quotidiana.",
+					route: "meditation",
+					info: eventsInfo["meditation"],
+					image: meditationImg,
+				},
+
 			],
 		},
 		contact: {
@@ -263,57 +208,31 @@ export default {
 			title: "Veranstaltungen",
 			subtitle: "Nächste Veranstaltungen",
 			description: "Schauen Sie sich unsere bevorstehenden Veranstaltungen an.",
+			button: "Teilnehmen",
 			details: [
 				{
 					title: "Heilungsenergie",
 					subtitle: "Tägliche Morgenmeditation zur Förderung von Achtsamkeit und innerem Frieden.",
 					description: "Tägliche Morgenmeditation zur Förderung von Achtsamkeit und innerem Frieden.",
-
 					route: "healing-energy",
-					info: [
-						{
-							date: "05 Sep. 2025",
-							location: "Stuttgart, Germany",
-							urlmap: "https://www.google.com/maps/place/Stuttgart,+Germany/@48.7758459,9.1829321,12z/data=!3m1!4b1!4m5!3m4!1s0x4799fbbfbbd8e7c7:0x422d6cdbf2a0e0b8!8m2!3d48.7758459!4d9.1829321",
-						},
-						{
-							date: "06 Sep. 2025",
-							location: "Milan, Italy",
-							urlmap: "https://www.google.com/maps/place/Milan,+Metropolitan+City+of+Milan,+Italy/@45.4642035,9.189982,12z/data=!3m1!4b1!4m5!3m4!1s0x4786c6e0d308f8e7:0x2a9cfcf8b1a0e0b8!8m2!3d45.4642035!4d9.189982",
-						},
-					],
+					info: eventsInfo["healing-energy"],
 					image: healingEnergyImg,
-					next: "Nächste Veranstaltung: ",
-				},
-				{
-					title: "Meditation",
-					subtitle: "Tägliche Morgenmeditation zur Förderung von Achtsamkeit und innerem Frieden.",
-					description: "Tägliche Morgenmeditation zur Förderung von Achtsamkeit und innerem Frieden.",
-					route: "meditation",
-					info: [
-						{
-							date: "Es sind derzeit keine Veranstaltungen geplant",
-							location: null,
-							urlmap: null,
-						},
-					],
-					image: meditationImg,
-					next: null,
 				},
 				{
 					title: "Konferenz",
 					subtitle: "Entdecken Sie die Ideen der International School of Self Awareness.",
 					description: "TODO: Beschreiben Sie die Konferenz und ihre Ziele.",
 					route: "reading",
-					info: [
-						{
-							date: "Es sind derzeit keine Veranstaltungen geplant",
-							location: null,
-							urlmap: null,
-						},
-					],
+					info: eventsInfo["reading"],
 					image: readingImg,
-					next: null,
+				},
+				{
+					title: "Meditation",
+					subtitle: "Tägliche Morgenmeditation zur Förderung von Achtsamkeit und innerem Frieden.",
+					description: "TODO: Beschreiben Sie die Meditation und ihre Vorteile.",
+					route: "meditation",
+					info: eventsInfo["meditation"],
+					image: meditationImg,
 				},
 			],
 		},
