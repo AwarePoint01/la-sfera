@@ -95,8 +95,8 @@ export default {
 				},
 				{
 					title: "Conference",
-					subtitle: "Rebalance your inner energy thanks to an extraordinary technique.",
-					description: "Healing energy is a unique and natural approach to restoring balance and harmony, both within ourselves and in our relationships with others. This method is based on a fundamental principle: health is the natural expression of a deep balance between body, mind, and spirit. \n\nAchieving this state means learning to love ourselves authentically and to respect our natural energy flow. Only in this way is it possible to promote healing and rediscover a deep connection with ourselves.",
+					subtitle: "Discover the ideas of the international school of self awareness.",
+					description: "TODO: Describe the conference and its objectives.",
 					route: "reading",
 					info: [
 						{
@@ -185,8 +185,8 @@ export default {
 				},
 				{
 					title: "Conferenze e seminari",
-					subtitle: "Leggiamo e discutiamo insieme le parole dei grandi maestri dello sviluppo consapevole.",
-					description: "Lettura di gruppo per esplorare nuovi libri e condividere idee.",
+					subtitle: "Scopri le idee dell'international school of self awareness.",
+					description: "Scopri le idee dell'international school of self awareness.",
 					route: "reading",
 					info: [
 						{
@@ -288,8 +288,8 @@ export default {
 				},
 				{
 					title: "Konferenz",
-					subtitle: "Vorlesungsgruppe, um neue Bücher zu erkunden und Ideen auszutauschen.",
-					description: "Vorlesungsgruppe, um neue Bücher zu erkunden und Ideen auszutauschen.",
+					subtitle: "Entdecken Sie die Ideen der International School of Self Awareness.",
+					description: "TODO: Beschreiben Sie die Konferenz und ihre Ziele.",
 					route: "reading",
 					info: [
 						{
