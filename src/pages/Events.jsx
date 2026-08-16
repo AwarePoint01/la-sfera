@@ -8,6 +8,7 @@ import { Grid, Box, useMediaQuery, useTheme } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import eventImg from "../assets/img/eventspage.jpg";
 import { useLanguage } from "../context/LanguageContext.jsx";
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 function Events() {
 	const { data } = useLanguage();
@@ -76,7 +77,7 @@ function Events() {
 								title={event.title}
 							/>
 							<CardMedia component="img" image={event?.image} />
-							{isMdUp && (
+							{isMdUp ? (
 								<>
 
 									<CardContent>
@@ -90,8 +91,11 @@ function Events() {
 										</Typography>
 									</CardContent>
 								</>
+							) : (
+								<CardContent sx={{ mt: "auto", textAlign: "end" }}>
+									<AddCircleIcon fontSize="small" />
+								</CardContent>
 							)}
-
 						</Card>
 					</Grid>
 				))}
