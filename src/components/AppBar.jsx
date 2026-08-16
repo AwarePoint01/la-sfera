@@ -87,7 +87,7 @@ function CustomBar() {
 				/> */}
 
 				<Box sx={{ flex: 1, display: "flex", justifyContent: "flex-end", mx: 2 }}>
-					<Button onClick={handleClick}  >
+					<Button onClick={handleClick} sx={{ backgroundColor: "transparent" }}>
 						<Box
 							sx={{
 								width: 28,

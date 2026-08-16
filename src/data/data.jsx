@@ -112,8 +112,15 @@ export default {
 		},
 		contact: {
 			title: "Contact",
-			description: "Get in touch with us.",
-			email: "Email: awarepoint01@gmail.com",
+			description: "Send us a message.",
+			name: "Name",
+			email: "Email",
+			message: "Message",
+			send: "Send",
+			sending: "Sending...",
+			success: "Thank you!",
+			successMessage: "Your message has been sent successfully.",
+			error: "Something went wrong. Please try again.",
 		},
 	},
 
@@ -202,8 +209,15 @@ export default {
 		},
 		contact: {
 			title: "Contatti",
-			description: "Mettiti in contatto con noi.",
-			email: "Email: awarepoint01@gmail.com",
+			description: "Inviaci un messaggio.",
+			name: "Nome",
+			email: "Email",
+			message: "Messaggio",
+			send: "Invia",
+			sending: "Invio...",
+			success: "Grazie!",
+			successMessage: "Il tuo messaggio è stato inviato con successo.",
+			error: "Qualcosa è andato storto. Per favore, riprova.",
 			socials: [
 				{
 					label: "Facebook",
@@ -305,8 +319,15 @@ export default {
 		},
 		contact: {
 			title: "Kontakte",
-			description: "Nehmen Sie Kontakt mit uns auf.",
-			email: "Email: awarepoint01@gmail.com",
+			description: "Senden Sie uns eine Nachricht.",
+			name: "Name",
+			email: "Email",
+			message: "Nachricht",
+			send: "Senden",
+			sending: "Wird gesendet...",
+			success: "Vielen Dank!",
+			successMessage: "Ihre Nachricht wurde erfolgreich gesendet.",
+			error: "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut.",
 		},
 	},
 };
