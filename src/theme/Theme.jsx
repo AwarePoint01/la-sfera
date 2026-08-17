@@ -61,9 +61,12 @@ const baseTheme = createTheme({
 			styleOverrides: {
 				root: {
 					fontSize: "1.2rem",
-					color: "black",
+					color: "white",
+					backgroundColor: "rgba(36, 93, 119, 0.5)",
 					textTransform: "none",
-					height: "100%"
+					"&:hover": {
+						backgroundColor: "rgba(36, 93, 119, 0.3)",
+					},
 				},
 			},
 		},
