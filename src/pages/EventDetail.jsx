@@ -40,7 +40,6 @@ function EventDetail() {
 	};
 
 	const handleEnroll = (info, location) => {
-		console.log("Enroll clicked for:", info, location);
 		setSelectedEvent({
 			...info,
 			location: location.name,
@@ -157,7 +156,7 @@ function EventDetail() {
 											onClick={() => handleEnroll(info, location)}
 
 										>
-											{data.events?.button}
+											{data.events?.buttonJoin}
 										</Button>
 									</Grid>
 								))}
@@ -173,9 +172,6 @@ function EventDetail() {
 				fullWidth
 				maxWidth="sm"
 			>
-				<DialogTitle>
-					{data.events?.enroll}
-				</DialogTitle>
 
 				<DialogContent>
 					{selectedEvent && (
@@ -184,21 +180,20 @@ function EventDetail() {
 								{event.title}
 							</Typography>
 
-							<Typography variant="body1">
+							<Typography variant="body1" sx={{ pb: 1 }} >
 								{selectedEvent.recurring
 									? selectedEvent.day
 									: formatDate(selectedEvent.day)}
 								{selectedEvent.time && ` · ${selectedEvent.time}`}
 							</Typography>
 
-							<Typography variant="body1">
+							<Typography variant="body1" sx={{ pb: 1 }} >
 								{selectedEvent.location && selectedEvent.location}
 							</Typography>
 						</Box>
 					)}
 
 					<Box component="form"
-
 						sx={{
 							width: "100%",
 							maxWidth: 600,
@@ -207,25 +202,20 @@ function EventDetail() {
 							gap: 2,
 						}}
 					>
-
 						<TextField label="Name" name="name" fullWidth required />
 						<TextField label="Email" name="email" type="email" fullWidth required />
 					</Box>
-
-
-
 				</DialogContent>
 
-				<DialogActions>
-					<Button onClick={handleClose}>
-						Cancel
+				<DialogActions sx={{ m: 3 }}>
+					<Button onClick={handleClose} sx={{ alignSelf: "center", fontSize: "0.875rem", }} >
+						{data.events?.buttonCancel}
 					</Button>
 
 					<Button type="submit"
 						//disabled={state.submitting}
-						sx={{ alignSelf: "center", px: 5, }} >
-
-						Submit
+						sx={{ alignSelf: "center", fontSize: "0.875rem", }} >
+						{data.events?.buttonJoin}
 					</Button>
 
 

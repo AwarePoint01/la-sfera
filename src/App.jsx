@@ -49,7 +49,7 @@ function ResponsiveRoutes() {
 					</>
 				}
 			/>
-			<Route path="/events/:route" element={<EventDetail />} />
+			<Route path="/la-sfera/events/:route" element={<EventDetail />} />
 			<Route path="*" element={<Navigate to="/la-sfera" replace />} />
 		</Routes>
 	);

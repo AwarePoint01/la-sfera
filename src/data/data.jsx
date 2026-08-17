@@ -1,7 +1,7 @@
 import HomeIcon from '@mui/icons-material/Home';
-import SpaIcon from '@mui/icons-material/Spa';
+import GroupIcon from '@mui/icons-material/Group';
 import EventIcon from '@mui/icons-material/Event';
-import PhoneIcon from '@mui/icons-material/Phone';
+import MailIcon from '@mui/icons-material/Mail';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import healingEnergyImg from "../assets/img/healingEnergy.jpg";
@@ -25,9 +25,9 @@ export default {
 		appBar: {
 			tab: [
 				{ label: "Home", id: "home", icon: <HomeIcon /> },
-				{ label: "Who We Are", id: "who-we-are", icon: <SpaIcon /> },
+				{ label: "Who We Are", id: "who-we-are", icon: <GroupIcon /> },
 				{ label: "Events", id: "events", icon: <EventIcon /> },
-				{ label: "Contact", id: "contact", icon: <PhoneIcon /> },
+				{ label: "Contact", id: "contact", icon: <MailIcon /> },
 			],
 			language: {
 				label: "Select Language",
@@ -51,19 +51,20 @@ export default {
 			title: "Events",
 			subtitle: "Next events",
 			description: "Check out our upcoming events.",
-			button: "Join",
+			buttonJoin: "Join",
+			buttonCancel: "Cancel",
 			details: [
 				{
 					title: "Healing energy",
 					subtitle: "Rebalance your inner energy thanks to an extraordinary technique.",
-					description: "Healing energy is a unique and natural approach to restoring balance and harmony, both within ourselves and in our relationships with others. This method is based on a fundamental principle: health is the natural expression of a deep balance between body, mind, and spirit. \n\nAchieving this state means learning to love ourselves authentically and to respect our natural energy flow. Only in this way is it possible to promote healing and rediscover a deep connection with ourselves.",
+					description: "Healing energy is a unique and natural approach to restoring balance and harmony, both within ourselves and in our relationships with others. This method is based on a fundamental principle: health is the natural expression of a deep balance between body, mind, and spirit. \n\nAchieving this state means learning to love ourselves authentically and to respect our natural energy flow.",
 					route: "healing-energy",
 					info: eventsInfo["healing-energy"],
 					image: healingEnergyImg,
 				},
 				{
 					title: "Conference",
-					subtitle: "Discover the ideas of the international school of self awareness.",
+					subtitle: "Discover the ideas of the International School of Self Awareness.",
 					description: "TODO: Describe the conference and its objectives.",
 					route: "reading",
 					info: eventsInfo["reading"],
@@ -97,9 +98,9 @@ export default {
 		appBar: {
 			tab: [
 				{ label: "Home", id: "home", icon: <HomeIcon /> },
-				{ label: "Chi Siamo", id: "who-we-are", icon: <SpaIcon /> },
+				{ label: "Chi Siamo", id: "who-we-are", icon: <GroupIcon /> },
 				{ label: "Eventi", id: "events", icon: <EventIcon /> },
-				{ label: "Contatti", id: "contact", icon: <PhoneIcon /> },
+				{ label: "Contatti", id: "contact", icon: <MailIcon /> },
 			],
 			language: {
 				label: "Seleziona lingua",
@@ -123,20 +124,21 @@ export default {
 			title: "Eventi",
 			subtitle: "Prossimi eventi",
 			description: "Scopri i nostri eventi in programma.",
-			button: "Partecipa",
+			buttonJoin: "Iscriviti",
+			buttonCancel: "Annulla",
 			details: [
 				{
 					title: "Energia risanante",
 					subtitle: "Riequilibria la tua energia interiore grazie ad una tecnica straordinaria.",
-					description: "Energia risanante è un approccio unico e naturale per ristabilire equilibrio e armonia, sia dentro di noi che nelle relazioni con gli altri. Questo metodo si fonda su un principio fondamentale: la salute è l’espressione naturale di un equilibrio profondo tra corpo, mente e spirito. \n\nRaggiungere questo stato significa imparare ad amarci autenticamente e a rispettare il nostro naturale flusso energetico. Solo così è possibile promuovere la guarigione e ritrovare una connessione profonda con noi stessi.",
+					description: "Energia risanante è un approccio unico e naturale per ristabilire equilibrio e armonia, sia dentro di noi che nelle relazioni con gli altri. Questo metodo si fonda su un principio fondamentale: la salute è l’espressione naturale di un equilibrio profondo tra corpo, mente e spirito. \n\nRaggiungere questo stato significa imparare ad amarci autenticamente e a rispettare il nostro naturale flusso energetico.",
 					route: "healing-energy",
 					info: eventsInfo["healing-energy"],
 					image: healingEnergyImg,
 				},
 				{
 					title: "Conferenze e seminari",
-					subtitle: "Scopri le idee dell'international school of self awareness.",
-					description: "Scopri le idee dell'international school of self awareness.",
+					subtitle: "Scopri le idee dell'International School of Self Awareness.",
+					description: "TODO: Descrivere la conferenza e i suoi obiettivi.",
 					route: "reading",
 					info: eventsInfo["reading"],
 					image: readingImg,
@@ -181,9 +183,9 @@ export default {
 		appBar: {
 			tab: [
 				{ label: "Home", id: "home", icon: <HomeIcon /> },
-				{ label: "Wer wir sind", id: "who-we-are", icon: <SpaIcon /> },
+				{ label: "Wer wir sind", id: "who-we-are", icon: <GroupIcon /> },
 				{ label: "Veranstaltungen", id: "events", icon: <EventIcon /> },
-				{ label: "Kontakt", id: "contact", icon: <PhoneIcon /> },
+				{ label: "Kontakt", id: "contact", icon: <MailIcon /> },
 			],
 			language: {
 				label: "Sprache auswählen",
@@ -202,18 +204,19 @@ export default {
 		},
 		whoWeAre: {
 			title: "Wer wir sind",
-			description: "Wir sind ein Team von Fachleuten, das sich der Bereitstellung der besten Lösungen für unsere Kunden widmet.",
+			description: "Wir teilen Ideen über Wachstum und inneres Wohlbefinden, wobei wir die Selbstwahrnehmung in den Mittelpunkt jedes Treffens stellen. Wir bieten Veranstaltungen an, die Ihnen helfen, Ihre innere Welt zu entdecken, dem Leben und den Menschen den richtigen Wert zu geben, sich mit den großen Fragen der Menschheit zu beschäftigen und Schönheit und Harmonie zu erkennen.",
 		},
 		events: {
-			title: "Veranstaltungen",
-			subtitle: "Nächste Veranstaltungen",
+			title: "Events",
+			subtitle: "Nächste Events",
 			description: "Schauen Sie sich unsere bevorstehenden Veranstaltungen an.",
-			button: "Teilnehmen",
+			buttonJoin: "Teilnehmen",
+			buttonCancel: "Abbrechen",
 			details: [
 				{
 					title: "Heilungsenergie",
-					subtitle: "Tägliche Morgenmeditation zur Förderung von Achtsamkeit und innerem Frieden.",
-					description: "Tägliche Morgenmeditation zur Förderung von Achtsamkeit und innerem Frieden.",
+					subtitle: "Bringen Sie Ihre innere Energie mit einer außergewöhnlichen Technik wieder ins Gleichgewicht.",
+					description: "Heilungsenergie ist ein einzigartiger und natürlicher Ansatz, um Gleichgewicht und Harmonie wiederherzustellen, sowohl in uns selbst als auch in unseren Beziehungen zu anderen. Diese Methode basiert auf einem grundlegenden Prinzip: Gesundheit ist der natürliche Ausdruck eines tiefen Gleichgewichts zwischen Körper, Geist und Seele. \n\nDieses Gleichgewicht zu erreichen bedeutet, zu lernen, uns selbst authentisch zu lieben und unseren natürlichen Energiefluss zu respektieren.",
 					route: "healing-energy",
 					info: eventsInfo["healing-energy"],
 					image: healingEnergyImg,
