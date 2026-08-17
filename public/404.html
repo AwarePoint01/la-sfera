@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<script>
+			const path = window.location.pathname;
+
+			if (path.startsWith('/la-sfera/')) {
+				const redirect = path.replace('/la-sfera', '') + window.location.search + window.location.hash;
+				window.location.replace('/la-sfera/' + '?redirect=' + encodeURIComponent(redirect));
+			}
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

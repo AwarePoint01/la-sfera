@@ -22,7 +22,7 @@ function App() {
 		<LanguageProvider>
 			<ThemeProvider theme={themes[mode]}>
 				<CssBaseline />
-				<Router>
+				<Router basename="/la-sfera">
 					<ScrollToTop />
 					<ResponsiveRoutes />
 				</Router>
@@ -38,7 +38,7 @@ function ResponsiveRoutes() {
 	return (
 		<Routes>
 			<Route
-				path="/la-sfera"
+				path="/"
 				element={
 					<>
 						<CustomBar />
@@ -49,8 +49,8 @@ function ResponsiveRoutes() {
 					</>
 				}
 			/>
-			<Route path="/la-sfera/events/:route" element={<EventDetail />} />
-			<Route path="*" element={<Navigate to="/la-sfera" replace />} />
+			<Route path="/events/:route" element={<EventDetail />} />
+			<Route path="*" element={<Navigate to="/" replace />} />
 		</Routes>
 	);
 }

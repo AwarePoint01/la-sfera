@@ -16,7 +16,7 @@ function Events() {
 	const theme = useTheme();
 
 	const handleClickOpen = (route) => {
-		navigate(`/la-sfera/events/${route}`);
+		navigate(`/events/${route}`);
 	};
 
 	const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
