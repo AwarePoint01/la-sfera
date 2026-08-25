@@ -103,8 +103,7 @@ function EventDetail() {
 						</Grid>
 
 						<Grid>
-							<Typography variant="h5">
-								{event.description}
+							<Typography variant="h5" dangerouslySetInnerHTML={{ __html: event.description }}>
 							</Typography>
 						</Grid>
 					</Grid>
