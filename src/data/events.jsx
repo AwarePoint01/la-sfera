@@ -74,7 +74,7 @@ export const eventsInfo = {
 	meditation: [
 		{
 			recurring: true,
-			day: "sunday",
+			day: "Every Sunday",
 			time: "10:00",
 			locations: [
 				{

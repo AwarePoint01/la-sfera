@@ -24,7 +24,7 @@ function WhoWeAre() {
 					{data.whoWeAre?.description}
 				</Typography>
 			</Grid>
-			<Grid size={{ xs: 12, md: 4 }} sx={{ textAlign: "center", }}>
+			<Grid size={{ xs: 12, md: 4 }} sx={{ textAlign: "center", display: "none" }}>
 				<Box component="img"
 					src={logo}
 					alt="La Sfera Logo"
@@ -32,7 +32,7 @@ function WhoWeAre() {
 
 				</Box>
 			</Grid>
-		</Grid>
+		</Grid >
 	);
 }
 
