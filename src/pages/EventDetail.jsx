@@ -10,6 +10,7 @@ import {
 	TextField,
 } from "@mui/material";
 import { useLanguage } from "../context/LanguageContext.jsx";
+import { useForm } from "@formspree/react";
 import { useNavigate, useParams } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useState } from "react";
@@ -19,6 +20,7 @@ function EventDetail() {
 	const navigate = useNavigate();
 	const { data, language } = useLanguage();
 	const locale = language === "gb" ? "en-GB" : language;
+	const [state, handleSubmit] = useForm("mkjwdgog");
 
 	const [open, setOpen] = useState(false);
 	const [selectedEvent, setSelectedEvent] = useState(null);
@@ -155,7 +157,7 @@ function EventDetail() {
 											onClick={() => handleEnroll(info, location)}
 
 										>
-											{data.events?.buttonJoin}
+											{data.events?.join.title}
 										</Button>
 									</Grid>
 								))}
@@ -171,55 +173,117 @@ function EventDetail() {
 				fullWidth
 				maxWidth="sm"
 			>
-
-				<DialogContent>
-					{selectedEvent && (
-						<Box sx={{ mb: 3 }}>
-							<Typography variant="h5" sx={{ mb: 3 }}>
-								{event.title}
+				{state.succeeded ? (
+					<>
+						<DialogContent>
+							<Typography
+								variant="h6"
+								color="success.main"
+								fontWeight="bold"
+								sx={{ mb: 1 }}
+							>
+								{data.events?.join.success}
 							</Typography>
 
-							<Typography variant="body1" sx={{ pb: 1 }} >
-								{selectedEvent.recurring
-									? selectedEvent.day
-									: formatDate(selectedEvent.day)}
-								{selectedEvent.time && ` · ${selectedEvent.time}`}
+							<Typography>
+								{data.events?.join.successMessage}
 							</Typography>
+						</DialogContent>
 
-							<Typography variant="body1" sx={{ pb: 1 }} >
-								{selectedEvent.location && selectedEvent.location}
-							</Typography>
-						</Box>
-					)}
+						<DialogActions sx={{ m: 3 }}>
+							<Button
+								onClick={handleClose}
+								sx={{
+									fontSize: "0.875rem",
+								}}
+							>
+								{data.events?.join.cancel}
+							</Button>
+						</DialogActions>
+					</>
+				) : (
+					<>
+						<DialogContent>
+							{selectedEvent && (
+								<Box sx={{ mb: 3 }}>
+									<Typography variant="h5" sx={{ mb: 3 }}>
+										{event.title}
+									</Typography>
 
-					<Box component="form"
-						sx={{
-							width: "100%",
-							maxWidth: 600,
-							display: "flex",
-							flexDirection: "column",
-							gap: 2,
-						}}
-					>
-						<TextField label="Name" name="name" fullWidth required />
-						<TextField label="Email" name="email" type="email" fullWidth required />
-					</Box>
-				</DialogContent>
+									<Typography variant="body1" sx={{ pb: 1 }}>
+										{selectedEvent.recurring
+											? selectedEvent.day
+											: formatDate(selectedEvent.day)}
+										{selectedEvent.time && ` · ${selectedEvent.time}`}
+									</Typography>
 
-				<DialogActions sx={{ m: 3 }}>
-					<Button onClick={handleClose} sx={{ alignSelf: "center", fontSize: "0.875rem", }} >
-						{data.events?.buttonCancel}
-					</Button>
+									<Typography variant="body1" sx={{ pb: 1 }}>
+										{selectedEvent.location}
+									</Typography>
+								</Box>
+							)}
 
-					<Button type="submit"
-						//disabled={state.submitting}
-						sx={{ alignSelf: "center", fontSize: "0.875rem", }} >
-						{data.events?.buttonJoin}
-					</Button>
+							<Box
+								component="form"
+								onSubmit={handleSubmit}
+								sx={{
+									width: "100%",
+									maxWidth: 600,
+									display: "flex",
+									flexDirection: "column",
+									gap: 2,
+								}}
+							>
+								<TextField
+									label={data.events?.join.name}
+									name="name"
+									fullWidth
+									required
+								/>
 
+								<TextField
+									label={data.events?.join.email}
+									name="email"
+									type="email"
+									fullWidth
+									required
+								/>
 
-				</DialogActions>
-			</Dialog >
+								<input
+									type="hidden"
+									name="message"
+									value={`Hi, I would like to join the event: ${event.title} scheduled on ${selectedEvent?.day} at ${selectedEvent?.time}, ${selectedEvent?.location}. Please provide me with more details. Thank you!`}
+								/>
+
+								<DialogActions sx={{ m: 3 }}>
+									<Button
+										onClick={handleClose}
+										sx={{ fontSize: "0.875rem" }}
+									>
+										{data.events?.join.cancel}
+									</Button>
+
+									<Button
+										type="submit"
+										disabled={state.submitting}
+										sx={{ fontSize: "0.875rem" }}
+									>
+										{state.submitting
+											? data.events?.join.sending
+											: data.events?.join.send}
+									</Button>
+								</DialogActions>
+							</Box>
+
+							{state.errors && (
+								<Typography color="error.main" sx={{ mt: 2 }}>
+									{data.events?.join.error}
+								</Typography>
+							)}
+						</DialogContent>
+					</>
+				)}
+			</Dialog>
 		</>
 	);
 }
