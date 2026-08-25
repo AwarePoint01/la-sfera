@@ -91,7 +91,6 @@ function Contact() {
 						<Button type="submit"
 							variant="contained"
 							disabled={state.submitting}
-							disabled={true}
 							sx={{ alignSelf: "center", px: 5, }} > {state.submitting ? contact?.sending : contact?.send} </Button>
 						{state.errors && (<Typography color="error" textAlign="center" > {contact?.error} </Typography>)}
 					</Box>
