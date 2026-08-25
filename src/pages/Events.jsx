@@ -8,7 +8,7 @@ import { Grid, Box, useMediaQuery, useTheme } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import eventImg from "../assets/img/eventspage.jpg";
 import { useLanguage } from "../context/LanguageContext.jsx";
-import AddCircleIcon from '@mui/icons-material/AddCircle';
+import AddIcon from '@mui/icons-material/Add';
 
 function Events() {
 	const { data } = useLanguage();
@@ -92,8 +92,8 @@ function Events() {
 									</CardContent>
 								</>
 							) : (
-								<CardContent sx={{ mt: "auto", textAlign: "end" }}>
-									<AddCircleIcon fontSize="small" />
+								<CardContent sx={{ mt: "auto", textAlign: "center" }}>
+									<AddIcon />
 								</CardContent>
 							)}
 						</Card>

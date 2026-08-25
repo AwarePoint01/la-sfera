@@ -252,7 +252,11 @@ function EventDetail() {
 								<input
 									type="hidden"
 									name="message"
-									value={`Hi, I would like to join the event: ${event.title} scheduled on ${selectedEvent?.day} at ${selectedEvent?.time}, ${selectedEvent?.location}. Please provide me with more details. Thank you!`}
+									value={data.events?.join.message
+										.replace("{event}", event.title)
+										.replace("{date}", selectedEvent?.day)
+										.replace("{time}", selectedEvent?.time)
+										.replace("{location}", selectedEvent?.location)}
 								/>
 
 								<DialogActions sx={{ m: 3 }}>
