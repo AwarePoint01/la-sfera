@@ -3,7 +3,6 @@ import { Menu, MenuItem, Button } from "@mui/material";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import { useState, useEffect, } from "react";
 import { useTheme } from "@mui/material/styles";
-import logo from '../assets/img/la-sfera-logo.png';
 import { useMediaQuery } from "@mui/material";
 import CustomDrawer from "./Drawer.jsx";
 
@@ -75,16 +74,6 @@ function CustomBar() {
 						</Button>
 					))}
 				</Box>
-
-				{/* <Box
-					component="img"
-					src={logo}
-					alt="La Sfera Logo"
-					sx={{
-						height: 100,
-						filter: "brightness(0) invert(1)",
-					}}
-				/> */}
 
 				<Box sx={{ flex: 1, display: "flex", justifyContent: "flex-end", mx: 2 }}>
 					<Button onClick={handleClick} sx={{ backgroundColor: "transparent" }}>
