@@ -20,19 +20,19 @@ function WhoWeAre() {
 				<Typography variant="h1">
 					{data.whoWeAre?.title}
 				</Typography>
-				<Typography variant="h5" sx={{ lineHeight: 1.8, }}>
+				<Typography variant="h5" sx={{ lineHeight: 1.8, padding: { xs: 2, md: 4 }, }}>
 					{data.whoWeAre?.description}
 				</Typography>
 			</Grid>
-			<Grid size={{ xs: 12, md: 4 }} sx={{ textAlign: "center", }}>
+			<Grid size={{ xs: 12, md: 4 }} sx={{ textAlign: "center", display: "none" }}>
 				<Box component="img"
 					src={logo}
 					alt="La Sfera Logo"
-					sx={{ height: 300 }}>
+					sx={{ height: 250 }}>
 
 				</Box>
 			</Grid>
-		</Grid>
+		</Grid >
 	);
 }
 
