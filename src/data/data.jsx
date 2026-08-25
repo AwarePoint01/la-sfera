@@ -51,8 +51,17 @@ export default {
 			title: "Events",
 			subtitle: "Next events",
 			description: "Check out our upcoming events.",
-			buttonJoin: "Join",
-			buttonCancel: "Cancel",
+			join: {
+				title: "Join",
+				name: "Name",
+				email: "Email",
+				send: "Send",
+				sending: "Sending...",
+				success: "Thank you!",
+				successMessage: "Your message has been sent successfully.",
+				error: "Something went wrong. Please try again.",
+				cancel: "Cancel",
+			},
 			details: [
 				{
 					title: "Healing energy",
@@ -124,8 +133,17 @@ export default {
 			title: "Eventi",
 			subtitle: "Prossimi eventi",
 			description: "Scopri i nostri eventi in programma.",
-			buttonJoin: "Iscriviti",
-			buttonCancel: "Annulla",
+			join: {
+				title: "Iscriviti",
+				name: "Nome",
+				email: "Email",
+				send: "Invia",
+				sending: "Invio...",
+				success: "Grazie!",
+				successMessage: "Il tuo messaggio è stato inviato con successo.",
+				error: "Qualcosa è andato storto. Per favore, riprova.",
+				cancel: "Annulla",
+			},
 			details: [
 				{
 					title: "Energia risanante",
@@ -210,8 +228,17 @@ export default {
 			title: "Events",
 			subtitle: "Nächste Events",
 			description: "Schauen Sie sich unsere bevorstehenden Veranstaltungen an.",
-			buttonJoin: "Teilnehmen",
-			buttonCancel: "Abbrechen",
+			join: {
+				title: "Teilnehmen",
+				name: "Name",
+				email: "Email",
+				send: "Senden",
+				sending: "Wird gesendet...",
+				success: "Danke!",
+				successMessage: "Ihre Nachricht wurde erfolgreich gesendet.",
+				error: "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut.",
+				cancel: "Abbrechen",
+			},
 			details: [
 				{
 					title: "Heilungsenergie",
