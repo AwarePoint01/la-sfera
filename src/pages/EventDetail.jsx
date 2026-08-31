@@ -33,6 +33,14 @@ function EventDetail() {
 		return <Typography>Event not found</Typography>;
 	}
 
+	const visibleEvents = event.info.filter((info) => {
+		if (info.recurring) {
+			return true;
+		}
+
+		return new Date(info.day) >= new Date();
+	});
+
 	const formatDate = (date) => {
 		return new Intl.DateTimeFormat(locale, {
 			day: "numeric",
@@ -111,7 +119,6 @@ function EventDetail() {
 					</Grid>
 				</Grid>
 
-				{/* Event dates */}
 				<Grid size={{ xs: 12, md: 6 }}>
 					<Grid container direction="column" spacing={5}>
 						<Grid>
@@ -128,41 +135,47 @@ function EventDetail() {
 							</Typography>
 						</Grid>
 
-						{event.info.map((info, index) => (
-							<Grid key={index} sx={{ mb: 2, width: "100%" }} >
-								<Typography variant="h6" sx={{ mb: 1 }}>
-									{info.recurring
-										? info.day
-										: formatDate(info.day)}, {info.time}
-								</Typography>
+						{visibleEvents.length === 0 ? (
+							<Typography variant="body1" sx={{ textAlign: "center" }}>
+								{data.events?.noEvents}
+							</Typography>
+						) : (
+							visibleEvents.map((info, index) => (
+								<Grid key={index} sx={{ mb: 2, width: "100%" }} >
+									<Typography variant="h6" sx={{ mb: 1 }}>
+										{info.recurring
+											? data.events?.days[info.day]
+											: formatDate(info.day)}, {info.time}
+									</Typography>
 
-								{info.locations.map((location, locationIndex) => (
-									<Grid
-										key={locationIndex}
-										container
-										alignItems="center"
-										justifyContent="space-between"
-										sx={{
-											py: 1,
-											borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
+									{info.locations?.map((location, locationIndex) => (
+										<Grid
+											key={locationIndex}
+											container
+											alignItems="center"
+											justifyContent="space-between"
+											sx={{
+												py: 1,
+												borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
 
-										}}
-									>
-										<Typography variant="body1">
-											{location.name}
-										</Typography>
-
-										<Button
-											sx={{ fontSize: "0.875rem", }}
-											onClick={() => handleEnroll(info, location)}
-
+											}}
 										>
-											{data.events?.join.title}
-										</Button>
-									</Grid>
-								))}
-							</Grid>
-						))}
+											<Typography variant="body1">
+												{location.name}
+											</Typography>
+
+											<Button
+												sx={{ fontSize: "0.875rem", }}
+												onClick={() => handleEnroll(info, location)}
+
+											>
+												{data.events?.join.title}
+											</Button>
+										</Grid>
+									))}
+								</Grid>
+							))
+						)}
 					</Grid>
 				</Grid>
 			</Grid>

@@ -85,11 +85,7 @@ function Events() {
 											{event.subtitle}
 										</Typography>
 									</CardContent>
-									<CardContent sx={{ mt: "auto", textAlign: "center" }}>
-										<Typography variant="body1" sx={{ fontWeight: 600 }}>
-											{event.next}{event.info[0].date}
-										</Typography>
-									</CardContent>
+
 								</>
 							) : (
 								<CardContent sx={{ mt: "auto", textAlign: "center" }}>

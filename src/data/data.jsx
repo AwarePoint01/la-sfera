@@ -51,6 +51,10 @@ export default {
 			title: "Events",
 			subtitle: "Next events",
 			description: "Check out our upcoming events.",
+			noEvents: "No events are currently scheduled. Stay tuned for future meetings.",
+			days: {
+				sunday: "Every Sunday",
+			},
 			join: {
 				title: "Join",
 				name: "Name",
@@ -134,6 +138,10 @@ export default {
 			title: "Eventi",
 			subtitle: "Prossimi eventi",
 			description: "Scopri i nostri eventi in programma.",
+			noEvents: "Al momento non sono previsti eventi. Resta aggiornato per i prossimi incontri.",
+			days: {
+				sunday: "Ogni domenica",
+			},
 			join: {
 				title: "Iscriviti",
 				name: "Nome",
@@ -230,6 +238,10 @@ export default {
 			title: "Events",
 			subtitle: "Nächste Events",
 			description: "Schauen Sie sich unsere bevorstehenden Veranstaltungen an.",
+			noEvents: "Derzeit sind keine Veranstaltungen geplant. Bleiben Sie dran für zukünftige Treffen.",
+			days: {
+				sunday: "Jeden Sonntag",
+			},
 			join: {
 				title: "Teilnehmen",
 				name: "Name",
