@@ -12,7 +12,7 @@ import {
 
 const ImageSwiper = ({
 	content = [],
-	slidesPerView = { xs: 1.3, sm: 2, md: 3 },
+	slidesPerView = 1.3,
 	breakpoints = {
 		600: {
 			slidesPerView: 2,
