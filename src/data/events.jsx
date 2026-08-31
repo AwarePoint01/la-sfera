@@ -1,24 +1,6 @@
 export const eventsInfo = {
 	"healing-energy": [
 		{
-			day: "2026-09-06",
-			time: "10:00",
-			locations: [
-				{
-					name: "Freiburg, Germany",
-					enrollUrl: "#",
-				},
-				{
-					name: "Stuttgart, Germany",
-					enrollUrl: "#",
-				},
-				{
-					name: "Bern, Switzerland",
-					enrollUrl: "#",
-				},
-			],
-		},
-		{
 			day: "2026-09-27",
 			time: "10:00",
 			locations: [
@@ -38,9 +20,9 @@ export const eventsInfo = {
 		},
 	],
 
-	reading: [
+	"reading": [
 		{
-			day: "2026-08-30",
+			day: "2026-09-06",
 			time: "17:00",
 			locations: [
 				{
@@ -71,10 +53,10 @@ export const eventsInfo = {
 		},
 	],
 
-	meditation: [
+	"meditation": [
 		{
 			recurring: true,
-			day: "Every Sunday",
+			day: "sunday",
 			time: "10:00",
 			locations: [
 				{

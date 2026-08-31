@@ -8,7 +8,7 @@ import { Grid, Box, useMediaQuery, useTheme } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import eventImg from "../assets/img/eventspage.jpg";
 import { useLanguage } from "../context/LanguageContext.jsx";
-import AddIcon from '@mui/icons-material/Add';
+import Swiper from '../components/Swiper.jsx';
 
 function Events() {
 	const { data } = useLanguage();
@@ -50,56 +50,61 @@ function Events() {
 				},
 			}}
 		>
-			<Typography variant="h1" sx={{ paddingTop: 20, }} >
+			<Typography variant="h1" sx={{ paddingTop: 15, }} >
 				{data.events?.title}
 			</Typography>
-
-			<Grid container spacing={{ xs: 2, lg: 10 }} sx={{ margin: 5 }} justifyContent="center">
-				{data.events?.details.map((event, index) => (
-					<Grid size={{ xs: 12, md: 4, lg: 3 }} key={index}>
-						<Card
+			{isMdUp ? (
+				<Grid
+					container
+					spacing={{ xs: 2, lg: 10 }}
+					sx={{ margin: 5 }}
+					justifyContent="center"
+				>
+					{data.events?.details.map((event, index) => (
+						<Grid
+							size={{ xs: 12, md: 4, lg: 3 }}
 							key={index}
-							onClick={() => handleClickOpen(event.route)}
-							sx={{
-								transition: "transform 0.30s ease, box-shadow 0.30s ease",
-								"&:hover": {
-									transform: "scale(1.1)",
-									boxShadow: 12,
-								},
-								cursor: "pointer",
-								overflow: "hidden",
-								display: "flex",
-								flexDirection: "column",
-								width: { xs: "100%", sm: "90%", md: "100%" },
-								height: { xs: "auto", sm: 400, md: 450 },
-							}}>
-							<CardHeader
-								title={event.title}
-							/>
-							<CardMedia component="img" image={event?.image} />
-							{isMdUp ? (
-								<>
-
-									<CardContent>
-										<Typography variant="body1" >
-											{event.subtitle}
-										</Typography>
-									</CardContent>
-									<CardContent sx={{ mt: "auto", textAlign: "center" }}>
-										<Typography variant="body1" sx={{ fontWeight: 600 }}>
-											{event.next}{event.info[0].date}
-										</Typography>
-									</CardContent>
-								</>
-							) : (
-								<CardContent sx={{ mt: "auto", textAlign: "center" }}>
-									<AddIcon />
+						>
+							<Card
+								onClick={() => handleClickOpen(event.route)}
+								sx={{
+									transition:
+										"transform 0.30s ease, box-shadow 0.30s ease",
+									"&:hover": {
+										transform: "scale(1.1)",
+										boxShadow: 12,
+									},
+									cursor: "pointer",
+									overflow: "hidden",
+									display: "flex",
+									flexDirection: "column",
+									width: { xs: "100%", sm: "90%", md: "100%" },
+									height: { xs: "auto", sm: 400, md: 450 },
+								}}>
+								<CardHeader title={event.title} />
+								<CardMedia
+									component="img"
+									image={event.image}
+									alt={event.title}
+								/>
+								<CardContent>
+									<Typography variant="body1">
+										{event.subtitle}
+									</Typography>
 								</CardContent>
-							)}
-						</Card>
-					</Grid>
-				))}
-			</Grid>
+							</Card>
+						</Grid>
+					))}
+				</Grid>
+			) : (
+				<Box sx={{ width: "100%", display: "flex", justifyContent: "center", mt: 2, mb: 2, }}>
+					<Swiper
+						content={data.events?.details}
+						onClick={handleClickOpen}
+						button={true}
+					/>
+				</Box>
+			)}
 		</Box>
 	);
 }
