@@ -62,10 +62,10 @@ const baseTheme = createTheme({
 				root: {
 					fontSize: "1.2rem",
 					color: "white",
-					backgroundColor: "rgba(36, 93, 119, 0.5)",
+					backgroundColor: "rgba(24, 45, 48, 0.8)",
 					textTransform: "none",
 					"&:hover": {
-						backgroundColor: "rgba(36, 93, 119, 0.3)",
+						backgroundColor: "rgba(24, 45, 48, 0.5)",
 					},
 				},
 			},

@@ -64,6 +64,8 @@ function CustomBar() {
 						>
 
 							<Typography variant="body2" sx={{
+								pl: 2,
+								pr: 2,
 								display: { xs: "none", md: "block" },
 							}}>
 								{tab.label}
