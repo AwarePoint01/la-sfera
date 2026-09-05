@@ -28,6 +28,7 @@ function Home() {
 						color: "white",
 						overflow: "hidden",
 						textShadow: theme.customShadows.textStrong,
+						fontWeight: "bold",
 					}}>
 					{data.home?.title}
 				</Typography>

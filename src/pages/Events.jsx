@@ -102,6 +102,7 @@ function Events() {
 						content={data.events?.details}
 						onClick={handleClickOpen}
 						button={true}
+						buttonLabel={data.events?.moreInfo}
 					/>
 				</Box>
 			)}

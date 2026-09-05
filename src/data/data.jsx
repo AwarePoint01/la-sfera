@@ -41,7 +41,7 @@ export default {
 			},
 		},
 		home: {
-			title: "I am this, this is me",
+			title: "What do I really want?",
 		},
 		whoWeAre: {
 			title: "Who we are",
@@ -52,6 +52,7 @@ export default {
 			subtitle: "Next events",
 			description: "Check out our upcoming events.",
 			noEvents: "No events are currently scheduled. Stay tuned for future meetings.",
+			moreInfo: "Discover more",
 			days: {
 				sunday: "Every Sunday",
 			},
@@ -128,7 +129,7 @@ export default {
 			},
 		},
 		home: {
-			title: "Io sono questo, questo sono io",
+			title: "Cosa voglio davvero?",
 		},
 		whoWeAre: {
 			title: "Chi siamo",
@@ -139,6 +140,7 @@ export default {
 			subtitle: "Prossimi eventi",
 			description: "Scopri i nostri eventi in programma.",
 			noEvents: "Al momento non sono previsti eventi. Resta aggiornato per i prossimi incontri.",
+			moreInfo: "Scopri di più",
 			days: {
 				sunday: "Ogni domenica",
 			},
@@ -228,7 +230,7 @@ export default {
 
 		},
 		home: {
-			title: "Ich bin das, das bin ich",
+			title: "Was will ich wirklich?",
 		},
 		whoWeAre: {
 			title: "Wer wir sind",
@@ -237,35 +239,36 @@ export default {
 		events: {
 			title: "Events",
 			subtitle: "Nächste Events",
-			description: "Schauen Sie sich unsere bevorstehenden Veranstaltungen an.",
-			noEvents: "Derzeit sind keine Veranstaltungen geplant. Bleiben Sie dran für zukünftige Treffen.",
+			description: "Entdecke unsere kommenden Veranstaltungen.",
+			noEvents: "Derzeit sind keine Veranstaltungen geplant. Bleib dran für unsere nächsten Treffen.",
+			moreInfo: "Mehr erfahren",
 			days: {
 				sunday: "Jeden Sonntag",
 			},
 			join: {
 				title: "Teilnehmen",
 				name: "Name",
-				email: "Email",
-				message: "Hallo, ich möchte am Event {event} teilnehmen, das am {date} um {time} in {location} stattfindet. Bitte geben Sie mir weitere Informationen. Vielen Dank!",
+				email: "E-Mail",
+				message: "Hallo, ich möchte gerne am Event {event} teilnehmen, das am {date} um {time} in {location} stattfindet. Ich würde mich über weitere Informationen freuen. Vielen Dank!",
 				send: "Senden",
 				sending: "Wird gesendet...",
 				success: "Danke!",
-				successMessage: "Ihre Nachricht wurde erfolgreich gesendet.",
-				error: "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut.",
+				successMessage: "Deine Nachricht wurde erfolgreich gesendet.",
+				error: "Etwas ist schiefgelaufen. Bitte versuche es noch einmal.",
 				cancel: "Abbrechen",
 			},
 			details: [
 				{
-					title: "Heilungsenergie",
-					subtitle: "Bringen Sie Ihre innere Energie mit einer außergewöhnlichen Technik wieder ins Gleichgewicht.",
-					description: "Heilungsenergie ist ein einzigartiger und natürlicher Ansatz, um Gleichgewicht und Harmonie wiederherzustellen, sowohl in uns selbst als auch in unseren Beziehungen zu anderen. Diese Methode basiert auf einem grundlegenden Prinzip: Gesundheit ist der natürliche Ausdruck eines tiefen Gleichgewichts zwischen Körper, Geist und Seele. \n\nDieses Gleichgewicht zu erreichen bedeutet, zu lernen, uns selbst authentisch zu lieben und unseren natürlichen Energiefluss zu respektieren.",
+					title: "Energieheilung",
+					subtitle: "Bringe deine innere Energie mit einer besonderen Technik wieder ins Gleichgewicht.",
+					description: "Energieheilung ist ein einzigartiger und natürlicher Ansatz, um Gleichgewicht und Harmonie wiederherzustellen, sowohl in uns selbst als auch in unseren Beziehungen zu anderen. Diese Methode basiert auf einem grundlegenden Prinzip: Gesundheit ist der natürliche Ausdruck eines tiefen Gleichgewichts zwischen Körper, Geist und Seele. \n\nDieses Gleichgewicht zu erreichen bedeutet, zu lernen, uns selbst authentisch zu lieben und unseren natürlichen Energiefluss zu respektieren.",
 					route: "healing-energy",
 					info: eventsInfo["healing-energy"],
 					image: healingEnergyImg,
 				},
 				{
 					title: "Konferenzen",
-					subtitle: "Entdecken Sie ein System von Ideen für die harmonische Entwicklung des Menschen.",
+					subtitle: "Entdecke ein System von Ideen für die harmonische Entwicklung des Menschen.",
 					description: "<i>\"Jeden Morgen, wenn ich aufwache und in den Spiegel schaue, wie oft von 365 Tagen bemerke ich mich selbst? Wie oft bin ich 'anwesend': Ich schaue mich nicht nur an, kämme meine Haare und führe alle Handlungen des täglichen Lebens aus, sondern merke ich, während ich sie tue, dass sie Tiefe und Substanz haben?\" \n<span style=\"display: block; padding-top: 1em; font-size: 0.8em;\">(Ararat - The Way of Presence)</span></i> \n\nWir teilen Ideen und Werkzeuge für die harmonische Entwicklung des Menschen und erforschen, was er derzeit ist und was er werden kann.",
 					route: "reading",
 					info: eventsInfo["reading"],
@@ -273,7 +276,7 @@ export default {
 				},
 				{
 					title: "Meditation",
-					subtitle: "Halten Sie jetzt einen Moment inne und denken Sie daran, dass das Atmen Ihnen das Leben ermöglicht.",
+					subtitle: "Halte einen Moment inne und denke daran, dass dein Atem dir das Leben ermöglicht.",
 					description: "Hast du jemals das Gefühl gehabt, angespannt zu sein, von Emotionen mitgerissen zu werden, von Gedanken hin und her geschleudert zu werden, mit anderen Worten: abwesend?\n Hast du jemals versucht, einfach die Augen zu schließen und einen Schritt in dich hinein zu tun?\n\n Es ist genau dieser Schritt nach innen, der es dir ermöglicht, dich von den Forderungen des Lebens zu entfernen und einen Ort der Stille zu finden, wo du Platz und Zeit hast, um zu wählen, was du wirklich willst.\n\n Meditation ist eine Praxis, die es dir erlaubt, diesen Ort zu entdecken, ihn zu praktizieren und ihn in deinem täglichen Leben mitzunehmen.",
 					route: "meditation",
 					info: eventsInfo["meditation"],
