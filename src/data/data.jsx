@@ -195,18 +195,6 @@ export default {
 			success: "Grazie!",
 			successMessage: "Il tuo messaggio è stato inviato con successo.",
 			error: "Qualcosa è andato storto. Per favore, riprova.",
-			socials: [
-				{
-					label: "Facebook",
-					url: "https://www.facebook.com/profile.php?id=100092522468844",
-					icon: <FacebookIcon fontSize="large" />,
-				},
-				{
-					label: "Instagram",
-					url: "https://www.instagram.com/la.sfera?igsh=NDJjNjAzeTBpc3J2",
-					icon: <InstagramIcon fontSize="large" />,
-				}
-			]
 		},
 	},
 	de: {

@@ -22,18 +22,8 @@ export const eventsInfo = {
 
 	"reading": [
 		{
-			day: "2026-09-06",
-			time: "17:00",
-			locations: [
-				{
-					name: "Online",
-					enrollUrl: "#",
-				}
-			]
-		},
-		{
-			day: "2026-09-13",
-			time: "17:00",
+			day: "2026-09-21",
+			time: "19:00",
 			locations: [
 				{
 					name: "Online",
@@ -61,7 +51,7 @@ export const eventsInfo = {
 			locations: [
 				{
 					name: "Online",
-					enrollUrl: "#",
+					enrollUrl: "https://selfawareness.london/sunday-meditation/",
 				}
 			]
 		},

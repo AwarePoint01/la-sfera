@@ -166,8 +166,13 @@ function EventDetail() {
 
 											<Button
 												sx={{ fontSize: "0.875rem", }}
-												onClick={() => handleEnroll(info, location)}
-
+												onClick={() => {
+													if (location.enrollUrl !== "#") {
+														window.location.href = location.enrollUrl;
+													} else {
+														handleEnroll(info, location);
+													}
+												}}
 											>
 												{data.events?.join.title}
 											</Button>
